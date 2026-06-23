@@ -29,6 +29,12 @@ Every business-specific detail is a `{{VARIABLE}}` token, so one template works 
 
 The templates are written Trillet first. The runtime and tool-call syntax is Trillet native, and a dedicated section maps every token to its VAPI and Retell equivalent.
 
+## Prerequisites
+
+**Starter tier** has no prerequisites beyond a Trillet account with the SMS booking link tool configured.
+
+**Full tier** requires backend workflows already built and connected before the prompt will work. Most of these are Make.com scenarios (or similar no-code workflows) exposed to the agent as tools via a Make.com MCP server or webhook. You need those workflows built and the exact tool names registered in Trillet before running this Skill. The prompt references those tool names directly, and if they do not exist in your platform the agent will fail mid-call.
+
 ## How to use it
 
 1. Drop `SKILL.md` into your Claude Code project. A `.claude/skills/` folder works, or anywhere Claude can read it.
